@@ -1,111 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Garden Satellite</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Swiper Slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Navbar -->
-  <header>
-    <div class="container">
-      <h1>Garden Satellite</h1>
-      <nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Garden Satellite</a>
+
+
+      <button class="nav-toggle" aria-label="Open navigation" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#rates">Rates</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#work-details">Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#pay">Pay</a></li>
+          <li><a href="#pay" class="cta">Pay</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <video autoplay muted loop id="heroVideo">
-      <source src="videos/hero-video.mp4" type="video/mp4">
+    <video autoplay muted loop id="heroVideo" playsinline>
+      <source src="videos/hero-video.mp4" type="video/mp4" />
     </video>
-    <div class="container hero-content">
-      <h2>Your Dream Garden, Our Expertise</h2>
-      <p>We design, build, and maintain beautiful landscapes for homes and businesses.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Garden Design</h3>
-          <p>Custom landscaping plans tailored to your home or business.</p>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-text">
+        <h1>Your Dream Garden, Our Expertise</h1>
+        <p>We design, build and maintain beautiful landscapes for homes and businesses — tailored to your space and budget.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
         </div>
-        <div class="service-card">
-          <h3>Lawn Maintenance</h3>
-          <p>Regular lawn care to keep your outdoor space healthy and green.</p>
-        </div>
-        <div class="service-card">
-          <h3>Planting & Trees</h3>
-          <p>Professional planting, tree care, and seasonal flower arrangements.</p>
-        </div>
-        <div class="service-card">
-          <h3>Outdoor Structures</h3>
-          <p>Patios, pergolas, water features, and other outdoor installations.</p>
-        </div>
+      </div>
+      <div class="hero-badge">
+        <div><strong>Trusted</strong> • Local Experts</div>
+        <div><strong>15 years</strong> Experience</div>
       </div>
     </div>
   </section>
 
-  <!-- Rates Section -->
-  <section id="rates">
-    <div class="container">
-      <h2>Rates</h2>
-      <p>Transparent and affordable pricing for all landscape services.</p>
-      <div class="rates-grid">
-        <div class="rate-card">
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Comprehensive landscaping and maintenance — simple, transparent pricing.</p>
+
+      <div class="grid services-grid">
+        <article class="card">
+          <div class="card-head">Garden Design</div>
+          <p>Custom landscaping plans tailored to your home or business.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-head">Lawn Maintenance</div>
+          <p>Regular lawn care to keep your outdoor space healthy and green.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-head">Planting & Trees</div>
+          <p>Professional planting, tree care, and seasonal flower arrangements.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-head">Outdoor Structures</div>
+          <p>Patios, pergolas, water features and other outdoor installations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rates -->
+  <section id="rates" class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">Rates</h2>
+      <p class="section-sub">Transparent, competitive pricing for every service.</p>
+
+      <div class="grid rates-grid">
+        <div class="rate">
           <h3>Garden Maintenance</h3>
-          <p class="price">₹500 – ₹800 / visit</p>
+          <div class="price">₹500 – ₹800 <span>/ visit</span></div>
           <p>Includes trimming, cleaning, watering, upkeep.</p>
         </div>
-        <div class="rate-card">
+
+        <div class="rate">
           <h3>Planting & Tree Care</h3>
-          <p class="price">₹200 – ₹2000 per plant/tree</p>
-          <p>Based on size, type, and installation work.</p>
+          <div class="price">₹200 – ₹2000 <span>/ per plant/tree</span></div>
+          <p>Based on size, type and installation work.</p>
         </div>
-        <div class="rate-card">
+
+        <div class="rate">
           <h3>Lawn Mowing</h3>
-          <p class="price">₹300 – ₹600</p>
+          <div class="price">₹300 – ₹600</div>
           <p>Includes trimming + cleanup.</p>
         </div>
-        <div class="rate-card">
+
+        <div class="rate">
           <h3>Complete Garden Setup</h3>
-          <p class="price">₹3000 – ₹25,000</p>
+          <div class="price">₹3000 – ₹25,000</div>
           <p>Grass, plants, soil, layout and labor included.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Work Details & Clickable Rates Section -->
-  <section id="work-details">
-    <div class="container">
+  <!-- Work Details & Accordion -->
+  <section id="work-details" class="section">
+    <div class="wrap">
       <h2 class="section-title">Work Details & Rates</h2>
-      <p class="section-subtitle">Tap a service to see details, images & booking options.</p>
+      <p class="section-sub">Tap each service for images, details and booking options.</p>
 
       <div class="accordion">
-        <!-- ITEM 1 -->
+        <!-- Accordion items -->
         <div class="accordion-item">
-          <button class="accordion-title">🌿 Garden Maintenance <span class="arrow">▼</span></button>
-          <div class="accordion-content">
-            <img src="images/maintenance.jpg" class="acc-img" alt="Garden Maintenance">
+          <button class="accordion-title">🌿 Garden Maintenance <span class="arrow">+</span></button>
+          <div class="accordion-body">
+            <img src="images/rate-maintenance.png" alt="Garden Maintenance" class="acc-img">
             <p><strong>Rate:</strong> ₹500 – ₹800 per visit</p>
             <ul>
               <li>Grass trimming</li>
@@ -113,45 +146,39 @@
               <li>Weeding</li>
               <li>General cleanup</li>
             </ul>
-            <button class="book-btn" onclick="bookService('Garden Maintenance', '500-800')">Book Now</button>
+            <button class="btn btn-accent" onclick="bookService('Garden Maintenance','500-800')">Book Now</button>
           </div>
         </div>
-
-        <!-- ITEM 2 -->
         <div class="accordion-item">
-          <button class="accordion-title">🌱 Planting & Tree Care <span class="arrow">▼</span></button>
-          <div class="accordion-content">
-            <img src="images/planting.jpg" class="acc-img" alt="Planting">
+          <button class="accordion-title">🌱 Planting & Tree Care <span class="arrow">+</span></button>
+          <div class="accordion-body">
+            <img src="images/planting.png" alt="Planting" class="acc-img">
             <p><strong>Rate:</strong> ₹200 – ₹2000 per plant/tree</p>
             <ul>
               <li>Soil preparation</li>
               <li>Plant installation</li>
               <li>Tree pruning</li>
             </ul>
-            <button class="book-btn" onclick="bookService('Planting & Tree Care', '200-2000')">Book Now</button>
+            <button class="btn btn-accent" onclick="bookService('Planting & Tree Care','200-2000')">Book Now</button>
           </div>
         </div>
-
-        <!-- ITEM 3 -->
         <div class="accordion-item">
-          <button class="accordion-title">🌾 Lawn Mowing <span class="arrow">▼</span></button>
-          <div class="accordion-content">
-            <img src="images/lawn.jpg" class="acc-img" alt="Lawn Mowing">
+          <button class="accordion-title">🌾 Lawn Mowing <span class="arrow">+</span></button>
+          <div class="accordion-body">
+            <img src="images/lawn.png" alt="Lawn Mowing" class="acc-img">
             <p><strong>Rate:</strong> ₹300 – ₹600</p>
             <ul>
               <li>Grass cutting</li>
               <li>Edge trimming</li>
               <li>Cleaning</li>
             </ul>
-            <button class="book-btn" onclick="bookService('Lawn Mowing', '300-600')">Book Now</button>
+            <button class="btn btn-accent" onclick="bookService('Lawn Mowing','300-600')">Book Now</button>
           </div>
         </div>
-
-        <!-- ITEM 4 -->
         <div class="accordion-item">
-          <button class="accordion-title">🏡 Complete Garden Setup <span class="arrow">▼</span></button>
-          <div class="accordion-content">
-            <img src="images/setup.jpg" class="acc-img" alt="Garden Setup">
+          <button class="accordion-title">🏡 Complete Garden Setup <span class="arrow">+</span></button>
+          <div class="accordion-body">
+            <img src="images/setup.png" alt="Garden Setup" class="acc-img">
             <p><strong>Rate:</strong> ₹3000 – ₹25,000</p>
             <ul>
               <li>Grass installation</li>
@@ -159,19 +186,20 @@
               <li>Soil delivery</li>
               <li>Labor included</li>
             </ul>
-            <button class="book-btn" onclick="bookService('Complete Garden Setup', '3000-25000')">Book Now</button>
+            <button class="btn btn-accent" onclick="bookService('Complete Garden Setup','3000-25000')">Book Now</button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <div class="swiper mySwiper">
+  <!-- Projects / Swiper -->
+  <section id="projects" class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="section-sub">A few highlights from our latest work.</p>
+
+      <div class="swiper mySwiper projects-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="projects/project1.png" alt="Project 1"></div>
           <div class="swiper-slide"><img src="projects/project2.png" alt="Project 2"></div>
@@ -184,112 +212,100 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <label>Name</label>
-        <input type="text" name="name" required>
-        <label>Email</label>
-        <input type="email" name="email" required>
-        <label>Phone</label>
-        <input type="tel" name="phone">
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div id="responseMsg"></div>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-sub">Send us a message — we reply quickly.</p>
+
+        <form id="contactForm" class="contact-card">
+  <label>Name</label>
+  <input type="text" name="name" required placeholder="e.g., John Doe">
+
+  <label>Email</label>
+  <input type="email" name="email" required placeholder="e.g., john@example.com">
+
+  <label>Phone</label>
+  <input type="tel" name="phone" placeholder="e.g., +91 98765 43210">
+
+  <label>Message</label>
+  <textarea name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+  <div id="responseMsg" class="response-msg" aria-live="polite"></div>
+</form>
+
+      </div>
+
+      <aside class="contact-info">
+  <div class="info-card">
+    <h3>Visit / Call</h3>
+    <p><strong>Phone:</strong> +91 94486 35922</p>
+    <p><strong>Email:</strong> gardensatellite@gmail.com</p>
+  </div>
+<div class="info-card whatsapp-contact">
+  <h3>Chat on WhatsApp</h3>
+  <a href="https://wa.me/9448635922" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>+91 94486 35922</span>
+  </a>
+</div>
+
+
+  <div class="info-card">
+    <h3>Service Areas</h3>
+    <p>Local residential & commercial areas — city-wide coverage.</p>
+  </div>
+</aside>
+
     </div>
   </section>
 
-  <!-- Payment Section -->
-  <section id="pay">
-    <div class="container">
-      <h2>Payment Options</h2>
-      <p>Choose any method that is convenient for you.</p>
-      <div class="payment-grid">
+  <!-- Payment -->
+  <section id="pay" class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">Payment Options</h2>
+      <p class="section-sub">Choose whatever is convenient.</p>
+
+      <div class="grid payment-grid">
         <div class="payment-card">
-          <h3>UPI Payments</h3>
+          <h4>UPI Payments</h4>
           <img src="images/qr.png" alt="UPI QR" class="qr">
-          <p><b>UPI ID:</b> gardensatellite@upi</p>
+          <p><strong>UPI ID:</strong> gardensatellite@upi</p>
         </div>
+
         <div class="payment-card">
-          <h3>Bank Transfer</h3>
-          <p><b>Account Name:</b> Garden Satellite</p>
-          <p><b>Account No:</b> 1234567890</p>
-          <p><b>IFSC:</b> ABCD0123456</p>
+          <h4>Bank Transfer</h4>
+          <p><strong>Account Name:</strong> Garden Satellite</p>
+          <p><strong>Account No:</strong> 1234567890</p>
+          <p><strong>IFSC:</strong> ABCD0123456</p>
         </div>
+
         <div class="payment-card">
-          <h3>Online Payment</h3>
-          <p>Stripe / Razorpay / PayPal</p>
-          <p>(Coming soon!)</p>
+          <h4>Online</h4>
+          <p>Stripe / Razorpay / PayPal (coming soon)</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Garden Satellite. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Garden Satellite. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JS Scripts -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    // ---------------- Swiper Slider ----------------
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: { delay: 3000, disableOnInteraction: false },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      pagination: { el: ".swiper-pagination", clickable: true }
-    });
+  <script src="script.js"></script>
+<!-- WhatsApp Top Button -->
+<a href="https://wa.me/9448635922" target="_blank" class="whatsapp-top-btn" aria-label="Chat on WhatsApp">
+  <img src="images/whatsapp-logo.png" alt="WhatsApp" />
+</a>
 
-    // ---------------- Smooth Scroll ----------------
-    document.querySelectorAll("header nav ul li a").forEach((link) => {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const target = document.getElementById(targetId);
-        window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
-      });
-    });
 
-    // ---------------- EmailJS Contact Form ----------------
-    emailjs.init("qyJhsnn7g7Tfw6TUs");
-    const contactForm = document.getElementById("contactForm");
-    const responseMsg = document.getElementById("responseMsg");
-
-    contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      emailjs.sendForm("service_h06vftz", "template_xv6be55", this)
-      .then(() => { responseMsg.innerText = "Message sent successfully!"; responseMsg.style.color = "green"; this.reset(); })
-      .catch(() => { responseMsg.innerText = "Failed to send!"; responseMsg.style.color = "red"; });
-    });
-
-    // ---------------- Accordion ----------------
-    document.querySelectorAll(".accordion-item").forEach((item) => {
-      const content = item.querySelector(".accordion-content");
-      item.querySelector(".accordion-title").addEventListener("click", () => {
-        item.classList.toggle("active");
-        content.style.maxHeight = item.classList.contains("active") ? content.scrollHeight + "px" : 0;
-      });
-    });
-
-    // ---------------- Book Now / WhatsApp ----------------
-    function bookService(serviceName, price) {
-      const phone = "9448635922";
-      const text = `Hello Garden Satellite,%0A%0AI want to book:%0AService: ${serviceName}%0APrice: ₹${price}%0A%0APlease share availability.`;
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-    }
-
-    function goToPayment() {
-      const paymentSection = document.getElementById("pay");
-      window.scrollTo({ top: paymentSection.offsetTop - 60, behavior: "smooth" });
-    }
-  </script>
 </body>
 </html>
